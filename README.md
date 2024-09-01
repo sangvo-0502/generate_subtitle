@@ -16,19 +16,45 @@ This is where **Whisper by OpenAI** comes in—a powerful tool that leverages cu
 
 ## Key Features
 
-- **Multi-language Support:** Whisper supports over 50 languages, making it a go-to solution for global content.
+- **Multi-language Support:** Whisper supports over 50 languages, making it a go-to solution for global content. (you can change the language code: https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)
 - **High Accuracy:** Whisper is trained on a large dataset, resulting in high transcription accuracy.
 - **Ease of Use:** With a simple command-line interface, you can generate subtitles with just a few commands.
 - **Translation Capabilities:** Whisper can not only transcribe but also translate the transcription into multiple languages.
 
-  **Note: this is for MacOS, you can still use it on Window but should follow the instruction for [Window installation]([url](https://github.com/openai/whisper)). 
+  **Note: this is for MacOS, you can still use it on Window but should follow the instruction for Window installation (https://github.com/openai/whisper). 
 
 ## How to Use Whisper to Generate Subtitles
 
 
-### 1. Installation
+### Installation
 
 First, you'll need to install Whisper. You can do this using pip:
 
 ```bash
 pip install git+https://github.com/openai/whisper.git
+```
+
+Secondly, create 4 folders like this (you can rename them):
+
+    ```
+    videos_folder = "/Users/administrator/Documents/test/video/"
+    output_folder = "/Users/administrator/Documents/test/audio/"
+    json_output_folder = "/Users/administrator/Documents/test/json/"
+    srt_output_folder =  "/Users/administrator/Documents/test/srt/"
+    ```
+Thirdly, open terminal and run (this will help to avoid out of memory)
+
+```bash
+export pytorch_enable_mps_fallback=1
+```
+Finally, run (in terminal) 
+
+```bash
+python transcribe_chinese.py ##change your language and filename
+```
+
+
+
+
+
+
