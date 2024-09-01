@@ -242,7 +242,7 @@ def process_videos_folder(videos_folder, output_folder, json_output_folder, srt_
 
         # print(">>>>Removed video!")
         # print("\n" * 2)
-# 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
+
 
 
 if __name__ == "__main__":
